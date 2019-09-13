@@ -1,0 +1,15 @@
+C:\Users\jongsik Won\Desktop\algoritm\boj_11722.cpp:1:2: error: invalid preprocessing directive #inlcude; did you mean #include?
+ #inlcude <cstdio>
+  ^~~~~~~
+  include
+C:\Users\jongsik Won\Desktop\algoritm\boj_11722.cpp: In function 'int main()':
+C:\Users\jongsik Won\Desktop\algoritm\boj_11722.cpp:7:3: error: 'printf' was not declared in this scope
+   printf("asdf");
+   ^~~~~~
+C:\Users\jongsik Won\Desktop\algoritm\boj_11722.cpp:7:3: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+C:\Users\jongsik Won\Desktop\algoritm\boj_11722.cpp:3:1:
++#include <cstdio>
+ using namespace std;
+C:\Users\jongsik Won\Desktop\algoritm\boj_11722.cpp:7:3:
+   printf("asdf");
+   ^~~~~~
