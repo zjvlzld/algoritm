@@ -1,5 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include "boj_15661.h"
+#include "boj_11723.h"
 /*#include<cstdio>
 int main()
 {

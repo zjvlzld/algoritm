@@ -29,5 +29,11 @@
     <ClInclude Include="boj_15661.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="boj_2529.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="boj_11723.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
