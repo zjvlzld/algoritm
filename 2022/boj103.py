@@ -6,4 +6,5 @@ for _ in range(T):
         a-=g2
     if(g1>g2):
         b-=g1
-print(a,b)
+print(a)
+print(b)

@@ -9,4 +9,4 @@ def gcd(a,b):
     return gcd(b,a%b)
 
 print(gcd(a,b))
-print(a*b/gcd(a,b))
+print(a*b//gcd(a,b))

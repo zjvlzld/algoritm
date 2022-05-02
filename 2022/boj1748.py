@@ -10,7 +10,6 @@ while get>digit*9:
     get-=digit*9
     digit*=10
 
-print(ans,get,mul,digit)
 ans+=get*mul
 print(ans)
 
