@@ -10,4 +10,5 @@ for i in range(1,b):
         for k in range(a+1):
             if(j-k>=0):
                 dp[i][j]+=dp[i-1][k]
+                dp[i][j]%=1000000000
 print(dp[b-1][a])

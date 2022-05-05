@@ -1,7 +1,7 @@
 n=int(input())
 
 
-dp=[1000000 for _ in range(1000000)]
+dp=[1000000 for _ in range(1000001)]
 dp[1]=0
 dp[2]=1
 dp[3]=1

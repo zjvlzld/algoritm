@@ -11,5 +11,4 @@ for i in range(3,31):
         else:
             dp[i]+=dp[i-j]*2
     dp[i]+=dp[i-2]*3
-print(dp)
 print(dp[n])

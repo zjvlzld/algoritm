@@ -3,7 +3,7 @@ n=int(sys.stdin.readline())
 
 dp=[0,0,0]
 
-for i in range(6):
+for i in range(n):
     before=dp.copy()
     get=int(sys.stdin.readline())
     dp[0]=max(before)

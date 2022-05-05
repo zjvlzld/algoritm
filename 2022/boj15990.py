@@ -10,4 +10,4 @@ for i in range(4,100001):
 
 for _ in range(T):
     n=int(sys.stdin.readline())
-    print(sum(dp[n]))
+    print(sum(dp[n])%1000000009)

@@ -10,5 +10,4 @@ for i in range(1,n+1):
         if(nums[i]>nums[j] and dp[j]+nums[i]>dp[i]):
             dp[i]=dp[j]+nums[i]
 
-print(dp)
 print(max(dp))

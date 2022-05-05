@@ -1,4 +1,3 @@
-from multiprocessing.connection import answer_challenge
 import sys
 n=int(sys.stdin.readline())
 
