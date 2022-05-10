@@ -1,3 +1,3 @@
-a=[1,2,3,4,5]
-a=a[3:]+a[:3]
-print(a)
+n=3
+for i in range(n-2,-1,-1):
+    print(i)

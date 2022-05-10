@@ -9,9 +9,9 @@ dp[s]=1
 count=1
 for i in nums:
     temp=dp[:]
+    dp=[0 for _ in range(m+1)]
     for j in range(m+1):
         if(temp[j]==1):
-            dp[j]=0
             count-=1
             if(j-i>=0):
                 dp[j-i]=1
@@ -19,7 +19,7 @@ for i in nums:
             if(j+i<=m):
                 dp[j+i]=1
                 count+=1
-    if(count==0):
+    if(count<1):
         print(-1)
         exit()
 
