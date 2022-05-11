@@ -40,7 +40,36 @@ for _ in range(T):
                     for q in range((2**b)):
                         pan[2**b*i+k][2**b*j+q]=temp[2**b*(i)+q][2**b*(j+1)-1-k]
 
-    for s in pan:
-        for w in s:
-            print(w,end=" ")
-        print()
+    if(a==5):
+        for i in range(2**(n-b)//2):
+            for j in range(2**(n-b)):
+                for k in range((2**b)):
+                    for q in range(2**b):   
+                        t=temp[2**b*i+k][2**b*j+q]
+                        pan[2**b*i+k][2**b*j+q]=temp[2**b*(2**(n-b)-1-i)+k][2**b*j+q]
+                        pan[2**b*(2**(n-b)-1-i)+k][2**b*j+q]=t
+    if(a==6):
+        for i in range(2**(n-b)):
+            for j in range(2**(n-b)//2):
+                for k in range((2**b)):
+                    for q in range(2**b):   
+                        t=temp[2**b*i+k][2**b*j+q]
+                        pan[2**b*i+k][2**b*j+q]=temp[2**b*i+k][2**b*(2**(n-b)-1-j)+q]
+                        pan[2**b*i+k][2**b*(2**(n-b)-1-j)+q]=t
+    if(a==7):
+        for i in range(2**(n-b)):
+            for j in range(2**(n-b)):
+                for k in range((2**b)):
+                    for q in range((2**b)):
+                        pan[2**b*i+k][2**b*j+q]=temp[2**b*(2**(n-b)-1-j)+k][2**b*i+q]
+    if(a==8):
+        for i in range(2**(n-b)):
+            for j in range(2**(n-b)):
+                for k in range((2**b)):
+                    for q in range((2**b)):
+                        pan[2**b*i+k][2**b*j+q]=temp[2**b*(j)+k][2**b*(2**(n-b)-1-i)+q]
+    
+for s in pan:
+    for w in s:
+        print(w,end=" ")
+    print()
