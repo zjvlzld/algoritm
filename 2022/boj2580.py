@@ -20,7 +20,7 @@ def solution(c):
                 print(j,end=" ")
             print()
         exit()
-        
+
     for i in range(9):
         for j in range(9):
             if(pan[i][j]==0):
@@ -36,6 +36,7 @@ def solution(c):
                         pan[i][j]=l
                         solution(c-1)
                         pan[i][j]=0
+                return
     
 
 

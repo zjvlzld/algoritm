@@ -27,10 +27,8 @@ def cicle(now,stack):
 def dfs(now,stack):
     t=stack[:]
     if(ans[now]!=-1):
-        for i in range(1,len(t)):
+        for i in range(1,len(stack)):
             ans[stack[i]]=len(stack)-i+ans[now]
-       # print(ans,stack)
-
         return
     t.append(now)
     for i in route[now]:
@@ -44,4 +42,60 @@ for i in range(1,n+1):
 
 for i in range(1,n+1):
     print(ans[i],end=" ")
-print()
+
+
+
+# import sys
+# from collections import defaultdict, deque
+
+# sys.setrecursionlimit(111111)
+
+# N = int(sys.stdin.readline().strip())
+# graph = defaultdict(list)
+# answer = [0] * (N + 1)
+# visit = [0] * (N + 1)
+# traced = []
+# cycle = []
+
+
+# def bfs():
+#     dist = [-1] * (N + 1)
+#     for i in cycle:
+#         dist[i] = 0
+#     q = deque(cycle)
+#     while q:
+#         curr = q.popleft()
+#         for next_node in graph[curr]:
+#             if dist[next_node] == -1:
+#                 dist[next_node] = dist[curr] + 1
+#                 q.append(next_node)
+#     return dist[1:]
+
+
+# def dfs(start, curr, cnt):
+#     visit[curr] = cnt
+#     traced.append(curr) # 방문한 노드를 저장
+#     for next_node in graph[curr]:
+#         if not visit[next_node]:
+#             dfs(start, next_node, cnt + 1)
+#         elif next_node in traced:
+#             if cnt - visit[next_node] >= 2:
+#                 for i in traced[traced.index(next_node):]:
+#                     cycle.append(i)
+#                 return
+#     traced.remove(curr)
+#     return
+
+
+# for _ in range(N):
+#     a, b = map(int, sys.stdin.readline().split())
+#     graph[a].append(b)
+#     graph[b].append(a)
+
+# for node in list(graph):
+#     traced = []
+#     if not visit[node]:
+#         dfs(node, node, 1)
+
+# answer = bfs()
+# print(*answer)

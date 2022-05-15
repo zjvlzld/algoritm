@@ -10,4 +10,4 @@ for i in range(4,5001,2):
 t= int(sys.stdin.readline())
 for _ in range(t):
     get=int(sys.stdin.readline())
-    print(dp[get])
+    print(dp[get]%1000000007)
