@@ -1,2 +1,1 @@
-for i in (4,2,-1):
-    print(i)
+print(5 ^ 7)

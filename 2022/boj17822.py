@@ -58,7 +58,8 @@ for _ in range(T):
                 if t[i][j]!=0:
                     count+=1
                     sumNow+=t[i][j]
-        avgNow=sumNow/count
+        if(count!=0):
+            avgNow=sumNow/count
         #print(avgNow,sumNow,count)
         for i in range(N):
             for j in range(M):
