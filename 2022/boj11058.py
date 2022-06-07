@@ -1,14 +1,16 @@
 import sys
 
-
 n=int(sys.stdin.readline())
 
-dp=[0 for _ in range(n+4)]
-for i in range(1,7):
-    dp[i]=i
+dp=[0 for _ in range(1001)]
 
-for i in range(7,n+1):
-    for j in range(2,5):
-        dp[i]=max(dp[i],dp[i-(j+1)]*j)
+dp[1]=1
+dp[2]=2
+dp[3]=3
 
+for i in range(4,n+1):
+    if(dp[i]<dp[i-1]+1):
+        dp[i]=dp[i-1]+1
+    for j in range(1,i-2):
+        dp[i]=max(dp[i],dp[i-2-j]*(j+1))
 print(dp[n])

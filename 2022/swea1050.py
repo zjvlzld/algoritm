@@ -26,9 +26,6 @@ for i in range(1,1001):
     else:
         continue
     dp[i]=1
-for i in range(1001):
-    if(dp[i]==1):
-        print(i)
 for case in range(1,T+1):
     a,b=map(int,input().split())
     print(f"#{case} {sum(dp[a:b+1])}")

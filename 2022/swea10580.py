@@ -11,5 +11,4 @@ for case in range(1,T+1):
         for j in range(i+1,n):
             if line[i][1]>line[j][1]:
                 ans+=1
-    print(line)
     print(f"#{case} {ans}")
