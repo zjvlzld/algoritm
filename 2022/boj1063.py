@@ -3,10 +3,8 @@ k,s,n=input().split()
 nowK=[ord(k[0])-ord('A'),int(k[1])-1]
 nowS=[ord(s[0])-ord('A'),int(s[1])-1]
 
-print(nowK,nowS)
 
 for _ in range(int(n)):
-    print(f"{chr(ord('A')+nowK[0])}{nowK[1]+1} {chr(ord('A')+nowS[0])}{nowS[1]+1}")
     get=input()
     if(get=='R'):
         if(nowK[0]+1>=8):

@@ -1,19 +1,18 @@
-N,x,y=map(int,input().split(" "))
+N,y,x=map(int,input().split(" "))
 
-m=[[0 for _ in range(1024)]for _ in range(1024)]
 
-i=0
-while i<N:
-    t=2**i
-    for i in range(t):
-        for j in range(t):
-            m[i][t+j]=m[i][j]+t*t
-    for i in range(t):
-        for j in range(t):
-            m[i+t][j]=m[i][j]+2*t*t
-    for i in range(t):
-        for j in range(t):
-            m[i+t][j+t]=m[i][j]+3*t*t
-    i+=1
-print(m)
-print(m[x][y])
+def solution(add,s,sx,sy):
+    if(s==1):
+        print(add)
+        exit()
+    s=s//2
+    if(sx<=x<sx+s and sy<=y<sy+s):
+        solution(add,s,sx,sy)
+    if(sx+s<=x and sy<=y<sy+s):
+        solution(add+s*s,s,sx+s,sy)
+    if(sx<=x<sx+s and sy+s<=y):
+        solution(add+s*s*2,s,sx,sy+s)
+    if(sx+s<=x and sy+s<=y):
+        solution(add+s*s*3,s,sx+s,sy+s)
+
+solution(0,2**N,0,0)
