@@ -6,7 +6,9 @@ ns=int(input())
 
 done=[0 for _ in range(ns)]
 stuff=[int(x) for x in input().split(' ')]
-
+if(max(crane)<max(stuff)):
+    print(-1)
+    exit()
 crane.sort(reverse=True)
 stuff.sort(reverse=True)
 ans=0
@@ -25,4 +27,3 @@ while count<ns:
         cranePoint[i]+=1
 print(ans)
         
-print(ans)

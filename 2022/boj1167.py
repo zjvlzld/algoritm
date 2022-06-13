@@ -1,5 +1,3 @@
-from tkinter.tix import InputOnly
-
 
 n=int(input())
 m=[[]for _ in range(n+1)]

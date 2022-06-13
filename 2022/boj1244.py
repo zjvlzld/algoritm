@@ -17,5 +17,5 @@ for _ in range(n):
     print(switch[i],end=' ')
     if(i%20==19):
         print()
-
     i+=1 
+print()

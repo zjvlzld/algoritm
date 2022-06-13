@@ -1,10 +1,11 @@
 get=input()
-p=[0 for _ in range(13)]
-k=[0 for _ in range(13)]
-h=[0 for _ in range(13)]
-t=[0 for _ in range(13)]
+p=[0 for _ in range(14)]
+k=[0 for _ in range(14)]
+h=[0 for _ in range(14)]
+t=[0 for _ in range(14)]
 for i in range(0,len(get),3):
     n=int(get[i+1])*10+int(get[i+2])
+    
     if get[i]=="P":
         if(p[n]==0):
             p[n]=1
