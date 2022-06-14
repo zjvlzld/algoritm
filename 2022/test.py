@@ -1,1 +1,4 @@
-print(23400%75)
+for i in range(10):
+    i+=1
+    print(i)
+    
