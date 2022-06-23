@@ -6,7 +6,6 @@ for _ in range(n):
 st=[]
 cal=['+','-','/','*','%']
 for i in get:
-    print(st)
     if i in cal:
         if i =='+':
             t=st[-1]+st[-2]
@@ -35,5 +34,4 @@ for i in get:
             st.append(t)
     else:
         st.append(nums[ord(i)-ord('A')])
-print(st)
 print("{:.2f}".format(st[0]))

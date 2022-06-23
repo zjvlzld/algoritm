@@ -11,4 +11,5 @@ for i in range(1,10001):
                 t+=int(j)
     else:
         continue
-print(ans)
+for i in ans:
+    print(i)

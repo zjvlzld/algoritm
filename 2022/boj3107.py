@@ -19,7 +19,6 @@ if(len(p)!=0):
     while len(p)!=4:
         p='0'+p
     ans+=p
-print(ans)
 for i in range(len(ans)):
     if(ans[i] =='p'):
         if(i==len(ans)-1):

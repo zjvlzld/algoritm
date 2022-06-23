@@ -1,0 +1,20 @@
+get=input()
+d=10
+c=ord('z')-ord('a')+1
+ans=0
+if(get[0]=='c'):
+    ans=ord('z')-ord('a')+1
+else:
+    ans=10
+for i in range(1,len(get)):
+    if(get[i]=='c'):
+        if(get[i-1]==get[i]):
+            ans*=c-1
+        else:
+            ans*=c
+    if(get[i]=='d'):
+        if(get[i-1]==get[i]):
+            ans*=d-1
+        else:
+            ans*=d
+print(ans)
