@@ -1,6 +1,6 @@
 n=int(input())
 
 if(n%2==0):
-    print('CY')
+    print('SK')
 else:
-    print("SK")
+    print("CY")
