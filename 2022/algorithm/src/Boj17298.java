@@ -34,11 +34,13 @@ public class Boj17298
             }
             stack.push(new Info(i,nums[i]));
         }
+        StringBuilder sb=new StringBuilder();
         for(int i=0;i<n;i++){
             if(ans[i]!=0)
-                System.out.printf("%d ",ans[i]);
+                sb.append(ans[i]).append(" ");
             else
-                System.out.printf("-1 ");
+                sb.append("-1 ");
         }
+        System.out.println(sb);
     }
 }
