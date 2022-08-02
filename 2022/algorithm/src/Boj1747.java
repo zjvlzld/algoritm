@@ -5,31 +5,35 @@ public class Boj1747 {
         Scanner sc= new Scanner(System.in);
         long s=sc.nextLong();
         long e=sc.nextLong();
-        int ans=0;
-        int sosu[]=new int[(int)Math.sqrt(e)+2];
-        sosu[2]=0;
+        long ans=0;
+        long sosu[]=new long[(int)Math.sqrt(100000000000000l)+1];
+        sosu[2]=1;
         long temp=2*2;
         while(temp<=e){
             if(temp>=s){
                 ans++;
             }
-            temp*=(long)2;
+            if(temp>Long.MAX_VALUE/2){
+                break;
+            }
+            temp*=2;
         }
-        for(int i=3;i<(int)Math.sqrt(e)+2;i+=2){
-            if(sosu[i]==0){
-                sosu[i]=1;
-                temp=(long)i*i;
+        for(long i=3;i<sosu.length;i+=2){
+            if(sosu[(int)i]==0){
+                sosu[(int)i]=1;
+                temp=i*i;
                 while(temp<=e){
                     if(temp>=s){
                         ans++;
                     }
+                    if(temp> Long.MAX_VALUE/i){
+                        break;
+                    }
                     temp*=i;
                 }
-                if((long)i*i>e){
-                    break;
-                }
-                for(int j=i;j<(int)Math.sqrt(e)+2;j+=i){
-                    sosu[j]=1;
+
+                for(long j=i;j< sosu.length;j+=i){
+                    sosu[(int)j]=1;
                 }
             }
         }
